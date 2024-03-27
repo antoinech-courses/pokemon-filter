@@ -1,5 +1,7 @@
 //const fetchPokemonList = require("./pokemonProvider.js")
 
+$(onLoad)
+
 function showPokemonList(pokemons, filterpredicate = () => true) {
     pokemons = pokemons.map(convertUnit).filter(filterpredicate); // Add converted units
 

@@ -1,5 +1,3 @@
-$(onLoad)
-
 function onLoad() {
     fetchPokemonList((pokemons) => {
         showPokemonList(pokemons, predicateAll)
@@ -23,3 +21,7 @@ function predicateHeight(pokemon) {
     // Show all pokemons with height less than 1
     return pokemon.height_m < 1;
 }
+
+exports.predicateAll = predicateAll
+exports.predicateWeight = predicateWeight
+exports.predicateHeight = predicateHeight
