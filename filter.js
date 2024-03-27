@@ -1,29 +1,25 @@
 $(onLoad)
 
 function onLoad() {
-    $('#filter-all').on('click', () => { filterPokemon(predicateAll) });
-    $('#filter-weight').on('click', () => { filterPokemon(predicateWeight) });
-    $('#filter-height').on('click', () => { filterPokemon(predicateHeight) });
+    fetchPokemonList((pokemons) => {
+        showPokemonList(pokemons, predicateAll)
+        $('#filter-all').on('click', () => {showPokemonList(pokemons, predicateAll)});
+        $('#filter-weight').on('click', () => {showPokemonList(pokemons, predicateWeight)});
+        $('#filter-height').on('click', () => {showPokemonList(pokemons, predicateHeight)});
+    })
 }
 
-function filterPokemon(predicate) {
-    $("tbody tr").hide(); // Hide all rows
-    $("tbody tr").filter(function () {
-        return predicate($(this))
-    }).show(); //Show selected rows
-}
-
-function predicateAll(object) {
+function predicateAll(pokemon) {
     // Show all pokemons
     return true;
 }
 
-function predicateWeight(object) {
+function predicateWeight(pokemon) {
     // Show all pokemons with weight greater than 3
-    return parseFloat(object.find(".pokemon-weight").text()) > 3;
+    return pokemon.weight_kg > 3;
 }
 
-function predicateHeight(object) {
+function predicateHeight(pokemon) {
     // Show all pokemons with height less than 1
-    return parseFloat(object.find(".pokemon-height").text()) < 1;
+    return pokemon.height_m < 1;
 }
