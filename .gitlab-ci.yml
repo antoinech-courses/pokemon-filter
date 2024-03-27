@@ -35,6 +35,8 @@ run_test:
 
 
 pages:
+  rules:
+    - if: $CI_COMMIT_TAG != ""
   stage: deploy
   script:
   - mkdir public
