@@ -1,0 +1,31 @@
+image: node:latest
+
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script:
+    - npm install --save-dev jest jest-junit
+  cache:
+    paths:
+      - node_modules/
+  artifacts:
+    expire_in: 10 days
+    when: on_success
+    paths:
+      - node_modules/
+
+run_test:
+  stage: test
+  dependencies:
+    - build
+  script:
+    - npm test
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - junit.xml
+
