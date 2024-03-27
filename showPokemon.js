@@ -2,23 +2,25 @@
 
 $(onLoad)
 
-function onLoad() {
-    fetchPokemonList(showPokemon, 200)
+function showPokemonList(pokemons, filterpredicate = () => true) {
+    pokemons = pokemons.map(convertUnit).filter(filterpredicate); // Add converted units
+
+    let table = $("tbody");
+    table.empty()
+    for (let i = 0; i < pokemons.length; ++i) {
+        table.append(showPokemon(pokemons[i]));
+    }
 }
 
-function showPokemon(pokemons) {
-    pokemons = pokemons.map(convertUnit); // Add converted units
-    let table = $("tbody");
-    for (let i = 0; i < pokemons.length; ++i) {
-        let row = $("<tr>");
-        row.append($("<td>").text(pokemons[i].name));
-        row.append($("<td class='pokemon-weight'>").text(pokemons[i].weight_kg));
-        row.append($("<td class='pokemon-height'>").text(pokemons[i].height_kg));
-        table.append(row);
-    }
+function showPokemon(pokemon){
+    let row = $("<tr>");
+    row.append($("<td>").text(pokemon.name));
+    row.append($("<td>").text(pokemon.weight_kg));
+    row.append($("<td>").text(pokemon.height_m));
+    return row
 }
 
 function convertUnit(pokemon) {
     // Convert weight and height to USI units
-    return { weight_kg: pokemon.weight / 10, height_kg: pokemon.height / 10, ...pokemon }
+    return { weight_kg: pokemon.weight / 10, height_m: pokemon.height / 10, ...pokemon }
 }
