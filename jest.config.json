@@ -1,6 +1,10 @@
 {
     "collectCoverage": true,
-    "coverageReporters": ["json", "html", "cobertura"]
-  
+    "coverageReporters": ["json", "html", "cobertura"],
+    "reporters": [
+        "default",
+        [ "jest-junit", { "suiteName": "jest tests", "outputDirectory": ".", "outputName": "junit.xml"} ]
+      ]
+    
   }
   
