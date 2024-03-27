@@ -21,5 +21,3 @@ function fetchPokemonList(callback, limit = 20) {
         callback(pokemons);
     });  
 }
-
-exports.fetchPokemonList = fetchPokemonList;
