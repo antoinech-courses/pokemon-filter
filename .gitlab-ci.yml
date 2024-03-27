@@ -3,6 +3,7 @@ image: node:latest
 stages:
   - build
   - test
+  - deploy
 
 build:
   stage: build
@@ -33,3 +34,14 @@ run_test:
         path: coverage/cobertura-coverage.xml
 
 
+pages:
+  stage: deploy
+  script:
+  - mkdir public
+  - cp pokemon.html public/
+  - cp filter.js public/
+  - cp pokemonProvider.js public/
+  - cp showPokemon.js public/
+  artifacts:
+    paths:
+    - public
