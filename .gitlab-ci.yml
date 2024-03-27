@@ -1,4 +1,4 @@
-image: node:latest
+image: gitlab-registry.imt-atlantique.fr/ue-scale/currency-converter/node:latest
 
 stages:
   - build
