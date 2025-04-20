@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage lines-valid="25" lines-covered="9" line-rate="0.36" branches-valid="1" branches-covered="1" branch-rate="1" timestamp="1711554833394" complexity="0" version="0.1">
+  <sources>
+    <source>C:\Users\cheuc\OneDrive\Documents\GitHub\pokemon-filter</source>
+  </sources>
+  <packages>
+    <package name="main" line-rate="0.36" branch-rate="1">
+      <classes>
+        <class name="filter.js" filename="filter.js" line-rate="0.2727" branch-rate="1">
+          <methods>
+            <method name="onLoad" hits="0" signature="()V">
+              <lines>
+                <line number="1" hits="0"/>
+              </lines>
+            </method>
+            <method name="(anonymous_1)" hits="0" signature="()V">
+              <lines>
+                <line number="2" hits="0"/>
+              </lines>
+            </method>
+            <method name="(anonymous_2)" hits="0" signature="()V">
+              <lines>
+                <line number="4" hits="0"/>
+              </lines>
+            </method>
+            <method name="(anonymous_3)" hits="0" signature="()V">
+              <lines>
+                <line number="5" hits="0"/>
+              </lines>
+            </method>
+            <method name="(anonymous_4)" hits="0" signature="()V">
+              <lines>
+                <line number="6" hits="0"/>
+              </lines>
+            </method>
+            <method name="predicateAll" hits="0" signature="()V">
+              <lines>
+                <line number="10" hits="0"/>
+              </lines>
+            </method>
+            <method name="predicateWeight" hits="0" signature="()V">
+              <lines>
+                <line number="15" hits="0"/>
+              </lines>
+            </method>
+            <method name="predicateHeight" hits="0" signature="()V">
+              <lines>
+                <line number="20" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="2" hits="0" branch="false"/>
+            <line number="3" hits="0" branch="false"/>
+            <line number="4" hits="0" branch="false"/>
+            <line number="5" hits="0" branch="false"/>
+            <line number="6" hits="0" branch="false"/>
+            <line number="12" hits="0" branch="false"/>
+            <line number="17" hits="0" branch="false"/>
+            <line number="22" hits="0" branch="false"/>
+            <line number="25" hits="3" branch="false"/>
+            <line number="26" hits="3" branch="false"/>
+            <line number="27" hits="3" branch="false"/>
+          </lines>
+        </class>
+        <class name="pokemonProvider.js" filename="pokemonProvider.js" line-rate="0.4285" branch-rate="1">
+          <methods>
+            <method name="fetchPokemonList" hits="3" signature="()V">
+              <lines>
+                <line number="6" hits="3"/>
+              </lines>
+            </method>
+            <method name="(anonymous_1)" hits="3" signature="()V">
+              <lines>
+                <line number="8" hits="3"/>
+              </lines>
+            </method>
+            <method name="(anonymous_2)" hits="0" signature="()V">
+              <lines>
+                <line number="11" hits="0"/>
+              </lines>
+            </method>
+            <method name="(anonymous_3)" hits="0" signature="()V">
+              <lines>
+                <line number="12" hits="0"/>
+              </lines>
+            </method>
+            <method name="(anonymous_4)" hits="0" signature="()V">
+              <lines>
+                <line number="16" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="1" hits="3" branch="false"/>
+            <line number="7" hits="3" branch="false"/>
+            <line number="8" hits="3" branch="false"/>
+            <line number="9" hits="3" branch="false"/>
+            <line number="10" hits="0" branch="false"/>
+            <line number="11" hits="0" branch="false"/>
+            <line number="12" hits="0" branch="false"/>
+            <line number="14" hits="0" branch="false"/>
+            <line number="16" hits="3" branch="false"/>
+            <line number="17" hits="0" branch="false"/>
+            <line number="18" hits="0" branch="false"/>
+            <line number="19" hits="0" branch="false"/>
+            <line number="21" hits="0" branch="false"/>
+            <line number="25" hits="3" branch="false"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
